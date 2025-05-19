@@ -54,9 +54,11 @@ Basic Aggregations & Filtering
 
 -- Count the number of Movies vs TV Shows
 
+```sql
 SELECT type, COUNT(*) AS content_count
 FROM netflix_titles
 GROUP BY type;
+```
 
 
 -- Find the most common rating for movies and TV shows
@@ -222,7 +224,7 @@ GROUP BY category;
 - **Geographical Insights:** The top countries and the average content releases by India highlight regional content distribution.
 - **Content Categorization:** Categorizing content based on specific keywords helps in understanding the nature of content available on Netflix.
 
--- 🔹 Project Summary
+-- **🔹 Project Summary **
 -- ✅ Uses real-world dataset (Netflix Titles)
 -- ✅ Solves practical business problems (Content trends, directors, actors, genres)
 -- ✅ Advanced analysis using SQL techniques (Aggregations, text search, subqueries)
