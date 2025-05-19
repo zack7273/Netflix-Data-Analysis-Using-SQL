@@ -61,110 +61,129 @@ GROUP BY type;
 
 -- Find the most common rating for movies and TV shows
 
+```sql
 SELECT rating, COUNT(*) AS count
 FROM netflix_titles
 GROUP BY rating
 ORDER BY count DESC
 LIMIT 1;
+```
 
 
 -- List all movies released in a specific year (e.g., 2020)
+
+```sql
 SELECT title, type
 FROM netflix_titles
 WHERE release_year = 2020;
-
+```
 
 -- Find content added in the last 5 years
 
+```sql
 SELECT title, type, date_added
 FROM netflix_titles
 WHERE date_added >= DATE_SUB(CURDATE(), INTERVAL 5 YEAR);
-
-
+```
 
 -- Intermediate Queries
 
 -- Find the top 5 countries with the most content
 
+```sql
 SELECT country, COUNT(*) AS total_content
 FROM netflix_titles
 GROUP BY country
 ORDER BY total_content DESC
 LIMIT 5;
+```
 
 
 -- Identify the longest movie
 
+```sql
 SELECT title, duration
 FROM netflix_titles
 WHERE type = 'Movie'
 ORDER BY duration DESC
 LIMIT 1;
+```
 
 
 
 -- Find all the movies/TV shows by director 'Rajiv Chilaka'
 
+```sql
 SELECT title, type
 FROM netflix_titles
 WHERE director = 'Rajiv Chilaka';
-
+```
 
 -- List all TV shows with more than 5 seasons
 
+```sql
 SELECT title, duration
 FROM netflix_titles
 WHERE type = 'TV Show' AND duration REGEXP '^[6-9]|[1-9][0-9] Season';
-
+```
 
 -- Count the number of content items in each genre
 
+```sql
 SELECT listed_in, COUNT(*) AS genre_count
 FROM netflix_titles
 GROUP BY listed_in
 ORDER BY genre_count DESC;
-
+```
 
 
 -- Advanced Analytics
 
 -- Find each year and the average number of content released in India
 
+```sql
 SELECT release_year, COUNT(*) / 12 AS avg_monthly_releases
 FROM netflix_titles
 WHERE country LIKE '%India%'
 GROUP BY release_year
 ORDER BY avg_monthly_releases DESC
 LIMIT 5;
+```
 
 
 -- List all movies that are documentaries
 
+```sql
 SELECT title
 FROM netflix_titles
 WHERE listed_in LIKE '%Documentary%'
 AND type = 'Movie';
-
+```
 
 -- Find all content without a director
 
+
+```sql
 SELECT title, type
 FROM netflix_titles
 WHERE director IS NULL;
-
+```
 
 -- Find how many movies actor 'Salman Khan' appeared in last 10 years
 
+```sql
 SELECT COUNT(*) AS movie_count
 FROM netflix_titles
 WHERE cast LIKE '%Salman Khan%'
 AND release_year >= YEAR(CURDATE()) - 10
 AND type = 'Movie';
-
+```
 
 
 -- Find the top 10 actors who have appeared in the highest number of movies produced in India
 
+
+```sql
 SELECT TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(cast, ',', n.n), ',', -1)) AS actor,
        COUNT(*) AS movie_count
 FROM netflix_titles
@@ -175,13 +194,14 @@ AND type = 'Movie'
 GROUP BY actor
 ORDER BY movie_count DESC
 LIMIT 10;
-
-
+```
 
 -- Expert-Level Text Analysis
 
 -- Categorize content based on 'kill' and 'violence' in the description
 
+
+```sql
 SELECT 
     CASE 
         WHEN description LIKE '%kill%' OR description LIKE '%violence%' THEN 'Bad'
@@ -190,7 +210,7 @@ SELECT
     COUNT(*) AS total_count
 FROM netflix_titles
 GROUP BY category;
-
+```
 
 
 **Objective:** Categorize content as 'Bad' if it contains 'kill' or 'violence' and 'Good' otherwise. Count the number of items in each category.
