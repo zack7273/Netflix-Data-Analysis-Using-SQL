@@ -1,3 +1,25 @@
+# 📊 Netflix SQL Analysis Project
 
-# Netflix-Data-Analysis-using-SQL
-This project involves a comprehensive analysis of Netflix's movies and TV shows data using SQL. The goal is to extract valuable insights and answer various business questions based on the dataset. The following README provides a detailed account of the project's objectives, business problems, solutions, findings, and conclusions.
+## 🔹 Overview
+This project analyzes **Netflix content trends** using SQL to uncover insights about:
+- Movie vs TV Show distribution
+- Director and Actor statistics
+- Genre trends
+- Rating analysis
+- Yearly content releases
+
+## 🔹 Dataset
+- File: `netflix_titles.csv`
+- Source: Netflix Content Library
+
+## 🔹 SQL Topics Covered
+✅ Aggregation (`COUNT`, `GROUP BY`, `ORDER BY`)  
+✅ String Filtering (`LIKE`, `REGEXP`)  
+✅ Date Functions (`DATE_SUB`, `CURDATE`)  
+✅ Subqueries & Ranking (`LIMIT`, `AVG`)  
+✅ Sentiment Analysis (`CASE` Statements)  
+
+## 🔹 Setup Instructions
+1. Clone the repo:  
+   ```bash
+   git clone https://github.com/zack7273/netflix-sql-analysis.git
