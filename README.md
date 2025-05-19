@@ -1,5 +1,7 @@
 # 📊 Netflix SQL Analysis Project
 
+img = [https://github.com/zack7273/Netflix-Data-Analysis-Using-SQL/blob/main/logo.png]
+
 ## 🔹 Overview
 This project analyzes **Netflix content trends** using SQL to uncover insights about:
 - Movie vs TV Show distribution
