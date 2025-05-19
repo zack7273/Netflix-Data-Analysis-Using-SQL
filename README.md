@@ -229,6 +229,4 @@ GROUP BY category;
 -- ✅ Solves practical business problems (Content trends, directors, actors, genres).
 -- ✅ Advanced analysis using SQL techniques (Aggregations, text search, subqueries).
 -- ✅ Prepares for deeper insights in streaming industry.
--- Would you like to expand this project into visualizations or reports?.
--- Let me know how you'd like to refine it!.
 
