@@ -225,10 +225,10 @@ GROUP BY category;
 - **Content Categorization:** Categorizing content based on specific keywords helps in understanding the nature of content available on Netflix.
 
 -- **🔹 Project Summary **
--- ✅ Uses real-world dataset (Netflix Titles)
--- ✅ Solves practical business problems (Content trends, directors, actors, genres)
--- ✅ Advanced analysis using SQL techniques (Aggregations, text search, subqueries)
--- ✅ Prepares for deeper insights in streaming industry
--- Would you like to expand this project into visualizations or reports? 🚀
--- Let me know how you'd like to refine it! 🎯
+-- ✅ Uses real-world dataset (Netflix Titles).
+-- ✅ Solves practical business problems (Content trends, directors, actors, genres).
+-- ✅ Advanced analysis using SQL techniques (Aggregations, text search, subqueries).
+-- ✅ Prepares for deeper insights in streaming industry.
+-- Would you like to expand this project into visualizations or reports?.
+-- Let me know how you'd like to refine it!.
 
